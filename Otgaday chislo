@@ -1,0 +1,8 @@
+secret = 8
+
+guess = int(input("Отгадай число от 1 до 10: "))
+
+if guess == secret:
+    print("Ты угадал!")
+else:
+    print("Ты ошибся, я загадал число", secret)
