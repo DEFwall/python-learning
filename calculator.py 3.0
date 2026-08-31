@@ -1,6 +1,6 @@
-a = int(input())
-b = int(input())
-c = input()
+a = int(input("Введите первое число:"))
+b = int(input("Введите второе число:"))
+c = input("Введите действие, например /, *, + или -:)
 if c == "+":
   d = a + b
   print(d)
