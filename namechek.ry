@@ -1,0 +1,22 @@
+s = input()
+count = 0
+valid = True 
+if s.startswith('@') == True:
+    count += 1
+
+sname = s[1:]
+    
+for i in range(len(sname)):
+    char = sname[i]
+    if char not in 'abcdefghijklmnopqrstuvwxyz' and not char.isdigit():
+        valid = False
+if valid == True:
+    count += 1
+    
+if 5 <= len(s) <= 15:
+    count += 1
+    
+if count == 3:
+    print('Correct')
+else:
+    print('Incorrect')
