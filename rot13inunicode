@@ -1,0 +1,37 @@
+#бесконечный цикл
+while True:
+
+    print('_____________________________________________')
+    print('1. Расшифровка')
+    print('2. Зашифровка (сдвиг на 13 единиц по UNICODE)')
+    print('3. STOP')
+    print('_____________________________________________')
+    operation = input('Введите номер операции:')
+
+#расшифровка
+    list_1 = []
+    if operation == '1':
+        print()
+        text_1 = input('Введите текст для расшифровки:')
+        for i in range(len(text_1)):
+            list_1.append(chr(ord(text_1[i]) - 12))
+        print(''.join(list_1))
+
+#зашифровка
+    list_2 = []
+    if operation == '2':
+        print()
+        text_2 = input('Введите текст для зашифровки:')
+        for i in range(len(text_2)):
+            list_2.append(chr(ord(text_2[i]) + 12))
+        print(''.join(list_2))
+        
+#остановка кода
+    if operation == '3':
+        break
+    
+#обработка неверного номера операции
+    if operation != '1' and operation != '2' and operation != '3':
+        print()
+        print('Неверный ввод номера операции')
+#by DEFwall :)
